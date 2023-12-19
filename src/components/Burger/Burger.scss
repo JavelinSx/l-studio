@@ -1,0 +1,194 @@
+.burger {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.burger-title {
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  color: $secondary-color;
+}
+.burger-button {
+  background-color: inherit;
+  position: absolute;
+  right: 1px;
+  margin-right: 13px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  height: 44px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  span {
+    position: relative;
+    background-color: $secondary-color;
+    height: 2px;
+    width: 80%;
+    border-radius: 9px;
+    opacity: 1;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.burger-toggle-open {
+  span {
+    position: relative;
+    opacity: 1;
+  }
+}
+.burger-toggle-close {
+  span {
+    position: relative;
+    opacity: 1;
+    &:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      left: 60px;
+    }
+    &:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
+
+.burger-list {
+  z-index: 10;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  width: 100%;
+  background-color: $white-color;
+  transition: 0.5s ease-in-out;
+  height: 100%;
+  max-height: 230px;
+}
+.burger-list-open {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 0px 8px 10px 4px rgba(161, 191, 186, 0.3);
+  -moz-box-shadow: 0px 8px 10px 4px rgba(161, 191, 186, 0.3);
+  box-shadow: 0px 8px 10px 4px rgba(161, 191, 186, 0.3);
+  .burger-item {
+    opacity: 1;
+    transition: 0.1s;
+    pointer-events: all;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border-radius: 10px;
+      -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+      -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+    }
+    &:last-child {
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    &:last-of-type {
+      margin-top: 10px;
+    }
+  }
+}
+.burger-list-close {
+  opacity: 0;
+  padding: 0;
+  height: 0;
+  transition: 0.5s ease-in-out;
+  .burger-item {
+    width: 170px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+}
+
+.burger-item {
+  box-sizing: border-box;
+  position: relative;
+  width: 170px;
+  text-align: center;
+}
+.burger-link {
+  display: block;
+  color: $black-color;
+  width: 100%;
+}
+.burger-list {
+}
+.burger-link-vk {
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 6px;
+  color: $white-color;
+  background-color: #0077ff;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    -webkit-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+  }
+}
+.burger-icon {
+  z-index: 9;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  height: 45px;
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .burger {
+    width: 95%;
+  }
+  .burger-list {
+    max-height: 250px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1366px) and (max-width: 100vw) {
+  .burger {
+    width: 100%;
+    max-width: 1024px;
+  }
+  .burger-list {
+    max-height: 250px;
+    font-size: 18px;
+  }
+}

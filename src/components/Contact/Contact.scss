@@ -1,0 +1,105 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.contact-telefon {
+}
+.contact-telefon-link {
+  text-decoration: underline;
+}
+.contact-address {
+  width: 100%;
+}
+.contact-map {
+  align-self: center;
+  background-color: inherit;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+  }
+}
+.contact-vk {
+  align-self: center;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+  background-color: #0077ff;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: $white-color;
+  }
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
+  }
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .contact {
+    width: 80%;
+  }
+  .contact-container {
+    width: 100%;
+    font-size: 22px;
+    padding: 0;
+  }
+  .contact-map {
+    font-size: 20px;
+    height: 50px;
+  }
+  .contact-vk {
+    height: 50px;
+  }
+}
+@media (min-width: 1366px) and (max-width: 100vw) {
+  .contact {
+    width: 85%;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .contact-container {
+    width: 100%;
+    font-size: 22px;
+    padding: 0;
+  }
+  .contact-map {
+    margin-top: 20px;
+    font-size: 20px;
+    height: 50px;
+  }
+  .contact-vk {
+    height: 50px;
+  }
+}

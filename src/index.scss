@@ -1,0 +1,24 @@
+@import 'react-awesome-slider/dist/styles.css';
+@import './styles/fonts/fonts.scss';
+@import './styles/variables.scss';
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'ProximaRegular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@import './components/Burger/Burger.scss';
+@import './components/App/App.scss';
+@import './components/About/About.scss';
+@import './components/Examples/Examples.scss';
+@import './components/Contact/Contact.scss';
+@import './components/Header/Header.scss';
+@import './components/Price/Price.scss';
+@import './components/Invocation/Invocation.scss';
+@import './components/Slogan/Slogan.scss';
+@import './components/Accordeon/Accordeon.scss';

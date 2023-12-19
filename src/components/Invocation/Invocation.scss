@@ -1,0 +1,24 @@
+.invocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.invocation-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.invocation-text {
+  font-size: 16px;
+}
+.invocation-img {
+  height: 60px;
+}
+.invocation-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 15px;
+}

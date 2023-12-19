@@ -1,0 +1,18 @@
+.examples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.examples-title-accord {
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .examples {
+    gap: 15px;
+  }
+}
