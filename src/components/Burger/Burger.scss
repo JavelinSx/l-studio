@@ -12,7 +12,6 @@
   width: 100%;
   text-align: center;
   z-index: 10;
-  color: $secondary-color;
 }
 .burger-button {
   background-color: inherit;
@@ -82,7 +81,7 @@
 .burger-list {
   z-index: 10;
   position: fixed;
-  top: 80px;
+  top: 78px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -132,7 +131,7 @@
   height: 0;
   transition: 0.5s ease-in-out;
   .burger-item {
-    width: 170px;
+    width: 190px;
     opacity: 0;
     transition: 0.3s;
     pointer-events: none;
@@ -142,7 +141,7 @@
 .burger-item {
   box-sizing: border-box;
   position: relative;
-  width: 170px;
+  width: 190px;
   text-align: center;
 }
 .burger-link {
@@ -153,7 +152,7 @@
 .burger-list {
 }
 .burger-link-vk {
-  padding: 6px;
+  padding: 10px;
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 6px;

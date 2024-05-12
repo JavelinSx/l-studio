@@ -3,10 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40px;
   width: 90%;
   transition: 0.6s;
-
+  position: relative;
   &:hover {
     cursor: pointer;
   }
@@ -14,6 +13,7 @@
 .accordeon-open {
   .accordeon-img {
     height: 450px;
+    @include shadow-card;
   }
   .accordeon-slider {
     height: 465px;
@@ -43,7 +43,6 @@
 }
 .accordeon-slider {
   --content-background-color: $white-color;
-  background-color: $white-color;
 }
 .accordeon-title-container {
   display: flex;
@@ -52,12 +51,14 @@
   justify-content: space-between;
   max-height: 40px;
   width: 100%;
-  padding: 10px;
-  border: 1px solid $secondary-color;
+  padding: 25px 20px 20px 20px;
+  @include shadow-card;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
-  -moz-box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
-  box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
+  // border: 1px solid $secondary-color;
+
+  // -webkit-box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
+  // -moz-box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
+  // box-shadow: 0px 0px 4px 5px rgba(108, 212, 255, 0.1);
 }
 .accordeon-title {
 }
@@ -122,13 +123,13 @@
       height: 550px;
     }
     .accordeon-slider {
-      height: 565px;
+      height: 630px;
       .awssld__bullets {
         visibility: visible;
       }
     }
     margin-bottom: 90px;
-    height: 590px;
+    height: 630px;
   }
   .accordeon-list {
     padding-top: 20px;

@@ -2,16 +2,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  position: relative;
+}
+.contact-form{
+  max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
   gap: 15px;
+  padding: 30px;
+}
+.contact-title{
+  padding-bottom: 10px;
+}
+.contact-frame-map{
+  width: 100vw;
+  
 }
 .contact-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
 }
 .contact-telefon {
 }
@@ -26,9 +39,11 @@
   background-color: inherit;
   height: 40px;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 0.5rem;
   transition: 0.3s ease-in-out;
+  border: none;
+  @include shadow-card;
   a {
     display: flex;
     align-items: center;
@@ -51,6 +66,8 @@
   border-radius: 0.5rem;
   transition: 0.3s ease-in-out;
   background-color: #0077ff;
+  border: none;
+  @include shadow-card;
   a {
     display: flex;
     align-items: center;
@@ -66,14 +83,16 @@
     box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2);
   }
 }
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 769px) and (max-width: 1365px) {
   .contact {
     width: 80%;
   }
   .contact-container {
-    width: 100%;
+    width: 100vw;
     font-size: 22px;
-    padding: 0;
+    position: relative;
+    color: white;
+
   }
   .contact-map {
     font-size: 20px;
@@ -82,22 +101,83 @@
   .contact-vk {
     height: 50px;
   }
+  .contact-form{
+    position: absolute;
+    background-color: #B6CAC6;
+    height: 340px;
+    left: 70px;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    color: white;
+    a{
+      color: white;
+    }
+  }
 }
-@media (min-width: 1366px) and (max-width: 100vw) {
+@media (min-width: 1366px) and (max-width: 1919px) {
   .contact {
     width: 85%;
     padding: 0;
     padding-bottom: 30px;
   }
   .contact-container {
-    width: 100%;
+    width: 100vw;
     font-size: 22px;
-    padding: 0;
+    position: relative;
+    color: white;
+
   }
   .contact-map {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     height: 50px;
+
+  }
+  .contact-form{
+    position: absolute;
+    background-color: #B6CAC6;
+    height: 340px;
+    left: 245px;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    a{
+      color: white;
+    }
+
+  }
+  .contact-vk {
+    height: 50px;
+  }
+}
+@media (min-width: 1920px) and (max-width: 100vw) {
+  .contact {
+    width: 85%;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .contact-container {
+    width: 100vw;
+    font-size: 22px;
+    position: relative;
+    color: white;
+
+  }
+  .contact-map {
+    margin-top: 20px;
+    font-size: 18px;
+    height: 50px;
+    color: white;
+  }
+  .contact-form{
+    position: absolute;
+    background-color: #B6CAC6;
+    height: 340px;
+    left: 520px;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    a{
+      color: white;
+    }
   }
   .contact-vk {
     height: 50px;

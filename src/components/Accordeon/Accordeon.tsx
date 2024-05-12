@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import ArrowIcon from '../../images/icon/arrow.svg';
+import Animation from '../Animation';
 interface AccordeonProps {
   titleText: string;
   imgSlides: string[];
@@ -12,6 +13,7 @@ const Accordeon: FC<AccordeonProps> = ({ titleText, imgSlides, imgCLick }) => {
   const [toggleAccord, setToggleAccord] = useState(false);
 
   return (
+    <>
     <div className={toggleAccord ? 'accordeon accordeon-open' : 'accordeon accordeon-close'}>
       <div className='accordeon-title-container' onClick={() => setToggleAccord(!toggleAccord)}>
         <h3 className='accordeon-title'>{titleText}</h3>
@@ -26,7 +28,11 @@ const Accordeon: FC<AccordeonProps> = ({ titleText, imgSlides, imgCLick }) => {
           ))}
         </AwesomeSlider>
       </div>
+      
     </div>
+
+    </>
+    
   );
 };
 

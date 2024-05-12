@@ -3,6 +3,7 @@ $black-color: #3f3b49;
 $secondary-color: #a1bfba;
 body {
   color: $black-color;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 h1,
 h2,
@@ -10,7 +11,6 @@ h3,
 h4,
 h5 {
   margin: 0;
-  font-family: 'ProximaRegular';
   font-weight: normal;
 }
 ul {
@@ -19,11 +19,9 @@ ul {
   margin: 0;
 }
 li {
-  font-family: 'ProximaRegular';
   margin: 0;
 }
 a {
-  font-family: 'ProximaRegular';
   text-decoration: none;
   color: $black-color;
 }
@@ -37,4 +35,9 @@ button {
   --organic-arrow-color: #a1bfba !important;
   --control-bullet-color: #a1bfba !important;
   --control-bullet-active-color: #a1bfba !important;
+}
+@mixin shadow-card {
+  -webkit-box-shadow: 0px 10px 10px -3px rgba(92, 85, 82, 0.5);
+  -moz-box-shadow: 0px 10px 10px -3px rgba(92, 85, 82, 0.5);
+  box-shadow: 0px 10px 10px -3px rgba(92, 85, 82, 0.5);
 }

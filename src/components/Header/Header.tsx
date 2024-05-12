@@ -5,9 +5,12 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
+    <>
     <section className='header'>
       <Burger></Burger>
     </section>
+    </>
+
   );
 };
 

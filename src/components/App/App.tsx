@@ -11,15 +11,19 @@ interface AppProps {}
 
 const App: FC<AppProps> = () => {
   return (
-    <div className='app'>
-      <Header></Header>
-      <About></About>
-      <Examples></Examples>
-      <Slogan></Slogan>
-      {/* <Invocation></Invocation> */}
-      <Price></Price>
-      <Contact></Contact>
-    </div>
+    <>
+
+        <div className='app'>
+          <Header></Header>
+          <About></About>
+          <Examples></Examples>
+          <Slogan></Slogan>
+          {/* <Invocation></Invocation> */}
+          <Price></Price>
+          <Contact></Contact>
+        </div>
+    </>
+    
   );
 };
 
